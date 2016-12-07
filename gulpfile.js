@@ -62,4 +62,6 @@ gulp.task('help', () => {
     console.log('gulp replaceHtml命令：md5加密js/css，并替换到html引用里');
 });
 
-gulp.task('default', ['babelES6', 'lessCompile','watchBabel', 'watchLess']);
+gulp.task('default', ['babelES6', 'lessCompile','watchBabel', 'watchLess'], () => {
+    console.log('目录文件已生成，可以进行开发了！');
+});
