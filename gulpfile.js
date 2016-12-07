@@ -27,7 +27,7 @@ gulp.task('md5js', ['babelES6'], () => {
 });
 
 gulp.task('watchBabel', () => {
-    gulp.watch('es6/*.js', ['babelES6', 'replaceHtml']); // 当文件发生改变时，执行babelES6任务
+    gulp.watch('es6/*.js', ['babelES6']); // 当文件发生改变时，执行babelES6任务
 });
 
 gulp.task('lessCompile', () => {
@@ -37,7 +37,7 @@ gulp.task('lessCompile', () => {
 });
 
 gulp.task('watchLess', function () {
-    gulp.watch('less/*.less', ['lessCompile', 'replaceHtml']);
+    gulp.watch('less/*.less', ['lessCompile']);
 });
 
 gulp.task('md5css', ['lessCompile'], function () {
